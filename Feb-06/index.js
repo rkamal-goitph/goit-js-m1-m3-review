@@ -7,7 +7,7 @@ if (x > 0) {
 x = 5;
 
 if (x === 5) {
-  console.log('x is 5');
+  console.log("x is 5");
 }
 
 if (x > 50) {
@@ -28,7 +28,9 @@ if (x > 50) {
 if (x > 50) {
   console.log("I will do something");
 } else {
- console.log("I am handling this in a different approach and not ignoring the scenario");
+  console.log(
+    "I am handling this in a different approach and not ignoring the scenario"
+  );
 }
 
 // if, else if, else
@@ -38,7 +40,7 @@ if (x > 50) {
 
 // if else happens when you want to handle a true evaluation and then do another thingas well for all other instances that results to false evaluation
 // else should never include a condition, it always stands alone
-let x = 20;
+// let x = 20;
 
 // if (x = 20) console.log("value is greater than 50");
 
@@ -52,7 +54,6 @@ let x = 20;
 // const evaluate = result && messageLogger();
 // console.log(evaluate);
 
-      
 // if (x > 50) {
 //   console.log("I will do something");
 // } else {
@@ -68,7 +69,7 @@ if (x > 50) {
   console.log("I wanna do something");
 } else if (x < 20) {
   console.log("I want to do another thing");
-} else if (x = 20) {
+} else if ((x = 20)) {
   console.log("I want to do another thing once");
 } else {
   console.log("This is the default handler");
@@ -135,30 +136,30 @@ let z = 21;
 if (z > 50) {
   console.log("Positive");
 } else {
-    if (z % 2 === 0) {
+  if (z % 2 === 0) {
     console.log("Even");
   } else {
     console.log("Odd");
   }
 }
 
-let result = (z > 50) ? "Positive" : (z % 2 === 0) ? "Even" : "Odd";
-let result = (z > 50) ? "Positive" : IsNumberOddOrEven();
+// let result = (z > 50) ? "Positive" : (z % 2 === 0) ? "Even" : "Odd";
+let result = z > 50 ? "Positive" : IsNumberOddOrEven();
 // if z > 50 , console.log("positive");
 // else check whether it is odd or even
 // console.log(result);
 
 function IsNumberOddOrEven() {
-  return (z % 2 === 0) ? "Even" : "Odd";
+  return z % 2 === 0 ? "Even" : "Odd";
 }
 
 if (z > 50) {
   console.log("Positive");
 } else {
-   IsNumberOddOrEven();
+  IsNumberOddOrEven();
 }
 
-const shortCircuitResult = (z < 50) && IsNumberOddOrEven();
+const shortCircuitResult = z < 50 && IsNumberOddOrEven();
 console.log(shortCircuitResult);
 
 let value = 4;
@@ -166,19 +167,18 @@ let value = 4;
 switch (value) {
   case 1:
     console.log("One");
-       break;
+    break;
   case 2:
     console.log("Two");
-        break;
+    break;
   case 3:
     console.log("Three");
-        break;
+    break;
   default:
     console.log("Default");
-        break;
+    break;
 }
 // If value is 1, it will log both "One" and "Two"
-
 
 // if (value === 1) {
 //       console.log("One");
@@ -207,7 +207,6 @@ switch (sum) {
 }
 // This will log "Default", which might not be the expected outcome
 
-
 let numbers = [1, 2, 3, 4, 5];
 for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] % 2 === 0) {
@@ -235,13 +234,14 @@ console.log(numbers[3]);
 console.log(numbers[4]);
 console.log(numbers.length - 1);
 
-let i = 0 // initialization of counter variable
-i <= numbers.length - 1 // exit condition determines when the process will terminate
-i++ // increments the counter so that it will meet the exit condition
-
+let i = 0; // initialization of counter variable
+i <= numbers.length - 1; // exit condition determines when the process will terminate
+i++; // increments the counter so that it will meet the exit condition
 
 for (let i = 0; i <= numbers.length - 1; i++) {
-  console.log(`At ${i}th iteration: The original number that we are adding to two is ${numbers[i]}:`);
+  console.log(
+    `At ${i}th iteration: The original number that we are adding to two is ${numbers[i]}:`
+  );
   numbers[i] = numbers[i] + 2;
   console.log(numbers[i]);
 }
@@ -262,4 +262,3 @@ console.log(`The new value of numbers array is: `, numbers);
 
 // at i = 4
 // numbers[4] = 5 + 2 = 7
-
